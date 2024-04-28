@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/poppins.css">
+</head>
+<style>
+  .splitdiv {
+
+    height: 100%;
+
+    width: 50%;
+
+  }
+
+  /* This part contains all of the left side of the screen */
+
+  /* ----------------------------------------- */
+
+  #leftdiv {
+
+    float: left;
+
+    background-image: url('assets/images/login_left_img.jpg');
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+
+
+  }
+
+  #leftdivcard {
+
+    margin: 0 auto;
+
+    width: 50%;
+
+    background-color: white;
+
+    margin-top: 50vh;
+
+    transform: translateY(-50%);
+
+    box-shadow: 10px 10px 1px 0px rgba(78, 205, 196, .2);
+
+    border-radius: 10px
+  }
+
+  #leftbutton {
+
+    background-color: #4ECDC4;
+
+    border-radius: 5px;
+
+    color: #FAFAFA;
+
+  }
+
+  /* ----------------------------------------- */
+
+
+  /* This part contains all of the left side of the screen */
+
+  /* ----------------------------------------- */
+
+  #rightdiv {
+
+    float: right;
+
+    background-image: url('../assets/images/');
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center center;
+
+  }
+
+  #rightdivcard {
+
+    margin: 0 auto;
+
+
+    margin-top: 48vh;
+
+    transform: translateY(-50%);
+
+
+
+    /* background-image: linear-gradient(to right, white 33%,  rgba(255,255,255,0) 0%);
+  
+    background-position: bottom;
+  
+    background-size: 20px 2px;
+  
+    background-repeat: repeat-x; */
+
+  }
+
+
+  #rightbutton {
+
+    background-color: #FFFFFF;
+
+    border-radius: 5px;
+
+    color: #4ECDC4;
+
+  }
+
+  /* ----------------------------------------- */
+
+
+
+
+  /* Basic styling */
+
+  /* ----------------------------------------- */
+
+  .btn-primary {
+    background-color: #04306a !important;
+
+  }
+</style>
+
+<body style="    background-color: white;">
+  <div style="height:100vh;width:100%;display:inline-block">
+
+    <div class="splitdiv" id="leftdiv">
+
+
+
+
+
+
+    </div>
+
+    <div class="splitdiv" id="rightdiv">
+
+
+      <div id="rightdivcard">
+        <img src="/assets/images/logorr.png" alt="" style="margin-left: 18rem;">
+        <h2 style="text-align:center"><b class="pinkcolor"> LOGIN TO RIYA TRAVEL </b></h2>
+
+
+
+
+
+        <form class="m-4 pr-5 pl-5 ">
+
+          <!-- to error: add class "has-danger" -->
+
+          <div class="form-group mt-5 pinkcolor">
+
+            <label for="exampleInputEmail1" style="font-weight: 600;">Email address</label>
+            <input type="email" class="form-control is-invalid form-control-md" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="Please Enter your email Id">
+          </div>
+
+          <div class="form-group pinkcolor">
+            <label for="exampleInputPassword1" style="font-weight: 600;">Password</label>
+            <input type="password" class="form-control " value="FakePSW" id="myInput" id="adminpass"
+              name="admin_password" placeholder="Please Enter your Password">
+            <input type="checkbox" onclick="myFunction()"><b class="pinkcolor"> Show Password</b>
+            <a href="#" style="float:right;font-size:12px;">Forgot password?</a>
+          </div>
+
+          <div style="justify-content: center; position: relative; top: 1rem; ">
+            <a class="text-white btnn btn"
+              style="width:522px; height: 45px; cursor: pointer; box-shadow: 0px 13px 20px  #CC2128"
+              href="company-information.html"> Sign in
+            </a>
+          </div>
+
+          <div>
+            <center><img src="/mis_vpay/assets/images/logo.svg" alt="" class="mt-5"></center>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/poppins.css">
+  </head>
+  <style>
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    .left {
+      left: 0;
+      background-image: url('assets/images/login_left_img.jpg');
+      background-size: cover;
+    }
+
+    .right {
+      right: 0;
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .centered img {
+      width: 150px;
+      border-radius: 50%;
+    }
+  </style>
+
+  <body>
+    <div class="split left">
+
+    </div>
+
+    <div class="split right">
+      <div style="text-align: center;">
+        <img src="/assets/images/logorr.png" alt="">
+        <h2 class="pinkcolor"> LOGIN TO RIYA TRAVEL</h2>
+      </div>
+      <form class="pinkcolor">
+        <label for="exampleInputEmail1" style="font-weight: 600;">Email address</label>
+        <input type="email" class="form-control is-invalid form-control-md" id="exampleInputEmail1"
+          aria-describedby="emailHelp" placeholder="Please Enter your email Id">
+        <label for="exampleInputPassword1" style="font-weight: 600;">Password</label>
+        <input type="password" class="form-control " value="FakePSW" id="myInput" id="adminpass" name="admin_password"
+          placeholder="Please Enter your Password">
+        <input type="checkbox" onclick="myFunction()"><b> Show Password</b>
+        <a href="#" style="float:right;font-size:12px;">Forgot password?</a>
+      </form><br><br>
+      <div>
+        <a class="text-white btnn btn w-100" href="company-information.html"
+          style="cursor: pointer; box-shadow: 0px 13px 20px  #CC2128"> Sign in </a>
+      </div>
+
+    </div>
+  </body>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
+
+  </html>
+</body>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+</script>
+
+</html>

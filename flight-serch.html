@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/poppins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+
+
+<style>
+    option.red {
+        background-color: #cc0000;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    option.pink {
+        background-color: #ffcccc;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .flight-tab {
+        display: flex;
+        list-style: none;
+        font-size: large;
+    }
+
+    .repo .repo1 {
+        visibility: hidden;
+        width: 220px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .repo:hover .repo1 {
+        visibility: visible;
+    }
+
+    .book:active {
+        width: 220px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+    }
+
+    .custom-select {
+        position: relative;
+        font-family: Arial;
+    }
+
+    .custom-select select {
+        display: none;
+    }
+
+
+
+
+    .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    /*point the arrow upwards when the select box is open (active):*/
+    .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+    }
+
+
+    .select-items div,
+    .select-selected {
+        color: #121212;
+        padding: 8px 12px;
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    /*style items (options):*/
+    .select-items {
+        position: absolute;
+        background-color: white;
+        ;
+        color: #fff;
+        border-radius: 8px;
+        border: 2px solid rgba(53, 45, 148, 0.30);
+        padding: 7px;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+
+    .select-hide {
+        display: none;
+    }
+
+    .select-items div:hover,
+    .same-as-selected {
+        background-color:#cc0000;
+        color: #fff;
+    }
+
+    .dashed {
+        border-style: dashed;
+        border-right: none;
+        padding: 20px;
+        border-radius: 30px;
+        margin-right: 50px;
+        width: 345px;
+        height: 125px;
+    }
+
+    .dashed:hover {
+        border-color: red;
+    }
+
+    .dashed1 {
+        border-style: dashed;
+        border-left: none;
+        padding: 22px;
+        border-radius: 30px;
+        margin-right: 50px;
+        width: 345px;
+        position: relative;
+        right: 65px;
+        height: 125px;
+    }
+
+    .dashed1:hover {
+        border-color:#cc0000;
+    }
+
+    .ab {
+        width: 13px;
+        height: 40px;
+        display: inline-block;
+        position: relative;
+        border-radius: 100%;
+        border-top-left-radius: 2500px;
+        border-bottom-left-radius: 2500px;
+        border: 2px dashed;
+        border-right: 0 !important;
+        bottom: 8px;
+        left: 325px;
+    }
+
+    .aa {
+        width: 13px;
+        height: 40px;
+        display: inline-block;
+        position: relative;
+        border-radius: 100%;
+        border: 2px dashed;
+        right: 30px;
+        bottom: 8px;
+        top: 13px;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 50%;
+        right: 24px;
+        height: 100px;
+    }
+
+
+
+    .dashed2 {
+        border: 2px dashed #CDCDCD;
+        border-radius: 11px;
+        margin-right: 50px;
+        width: 383px;
+        padding: 20px;
+        height: 137px;
+        background: #fff;
+
+        background-color: #fff;
+    }
+
+    .inp {
+        border: none;
+    }
+
+    .dashed2:hover {
+        border-color:#cc0000;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        z-index: 1;
+        border-radius: 8px;
+        border: 2px solid rgba(53, 45, 148, 0.30);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .image {
+
+        position: relative;
+        top: 29px;
+        left: 35px;
+    }
+
+    .book {
+        background-color: #D6C5C521;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px 6px !important;
+        line-height: 20px;
+        display: inline-block;
+        border-radius: 5px !important;
+        width: auto;
+        position: relative;
+        background: #cc0000;
+        color: #fff;
+    }
+
+    .book:active {
+        background:#cc0000;
+        color: #fff;
+    }
+
+    .dropbtn {
+        color: rgb(17, 17, 17);
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    }
+
+    .hov:hover,
+    .hov:focus {
+        background-color: #cc0000;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content div {
+        color: black;
+        padding: 10px 2px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .show {
+        display: block;
+    }
+
+
+    option.red {
+        background-color: #cc0000;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    option.pink {
+        background-color: #ffcccc;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .flight-tab {
+        display: flex;
+        list-style: none;
+        font-size: large;
+    }
+
+    .repo .repo1 {
+        visibility: hidden;
+        width: 220px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .repo:hover .repo1 {
+        visibility: visible;
+    }
+
+    .book:active {
+        width: 220px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+    }
+
+    .custom-select {
+        position: relative;
+        font-family: Arial;
+    }
+
+    .custom-select select {
+        display: none;
+    }
+
+
+
+
+    .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    /*point the arrow upwards when the select box is open (active):*/
+    .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+    }
+
+
+    .select-items div,
+    .select-selected {
+        color: #121212;
+        padding: 8px 16px;
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    /*style items (options):*/
+    .select-items {
+        position: absolute;
+        background-color: white;
+        ;
+        color: #fff;
+        border-radius: 8px;
+        border: 2px solid rgba(53, 45, 148, 0.30);
+        padding: 7px;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+
+    .select-hide {
+        display: none;
+    }
+
+    .select-items div:hover,
+    .same-as-selected {
+        background-color: #CC2128;
+        color: #fff;
+    }
+
+    .dashed {
+        border-style: dashed;
+        border-right: none;
+        padding: 20px;
+        border-radius: 30px;
+        margin-right: 50px;
+        width: 345px;
+        height: 125px;
+    }
+
+    .dashed:hover {
+        border-color: red;
+    }
+
+    .dashed1 {
+        border-style: dashed;
+        border-left: none;
+        padding: 22px;
+        border-radius: 30px;
+        margin-right: 50px;
+        width: 345px;
+        position: relative;
+        right: 65px;
+        height: 125px;
+    }
+
+    .dashed1:hover {
+        border-color: red;
+    }
+
+    .ab {
+        width: 13px;
+        height: 40px;
+        display: inline-block;
+        position: relative;
+        border-radius: 100%;
+        border-top-left-radius: 2500px;
+        border-bottom-left-radius: 2500px;
+        border: 2px dashed;
+        border-right: 0 !important;
+        bottom: 8px;
+        left: 325px;
+    }
+
+    .aa {
+        width: 13px;
+        height: 40px;
+        display: inline-block;
+        position: relative;
+        border-radius: 100%;
+        border: 2px dashed;
+        right: 30px;
+        bottom: 8px;
+        top: 13px;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 50%;
+        right: 24px;
+        height: 100px;
+    }
+
+
+
+    .dashed2 {
+        border: 2px dashed #CDCDCD;
+        border-radius: 11px;
+        margin-right: 50px;
+        width: 383px;
+        padding: 20px;
+        height: 137px;
+        background: #fff;
+
+        background-color: #fff;
+    }
+
+    .inp {
+        border: none;
+    }
+
+    .dashed2:hover {
+        border-color: #cc0000;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .image {
+
+        position: relative;
+        top: 29px;
+        left: 35px;
+    }
+
+    .book {
+        background-color: #D6C5C521;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px 6px !important;
+        line-height: 20px;
+        display: inline-block;
+        border-radius: 5px !important;
+        width: auto;
+        position: relative;
+        background:#cc0000;
+        color: #fff;
+    }
+
+    .book:active {
+        background:#cc0000;
+        color: #fff;
+    }
+
+    .small {
+
+
+        height: auto;
+        border: 2px dashed #CDCDCD;
+        padding: 15px 25px 15px 15px;
+        border-radius: 15px;
+        float: left;
+        position: relative;
+        margin: 5px;
+    }
+
+    .shadow {
+        box-shadow: 0rem 1.5rem 2rem 0.5rem rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .list {
+        padding: 2px;
+    }
+
+    .btnnn {
+        border: 1px solid rgb(255, 255, 255, 0);
+        border-radius: 15px;
+        color: #fff;
+        font-weight: normal;
+        font-size: 14px;
+        transition: 0.5s;
+        background: #CC2128;
+        position: relative;
+        text-align: center;
+        top: 2px;
+        float: right;
+    }
+
+    .btnnn:hover {
+        background-color: white;
+        color: red;
+        border: 1px solid red;
+    }
+
+    .ref {
+        padding: 2px 5px;
+        display: inline-block;
+        background: #F3F3F3;
+        color: #cc2128;
+        margin-top: 2px;
+
+    }
+
+    .det {
+        height: auto;
+        font-size: 12px;
+        padding: 3px 10px 0;
+        position: relative;
+        float: left;
+        color: #cc2128;
+        font-weight: 600;
+    }
+
+    .but {
+        width: auto;
+        margin: 4px;
+        font-size: 12px;
+        border: 1px solid #cc2128;
+        color: #cc2128;
+        border-radius: 5px;
+        margin: 0 5px 0 0;
+        padding: 0 5px;
+        cursor: pointer;
+    }
+
+    .active,
+    .but:hover {
+        background-color: #cc0000;
+        color: white;
+    }
+
+    table,
+    td,
+    th {
+        border: 1px solid;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white" id="head-wrraper">
+        <div class="col-md-2 d-flex">
+            <a class="navbar-brand" href="#"><img src="/assets/images/logorr.png" class="w-50" alt="logo"></a>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="mr-auto navbar-nav">
+                            <li class="nav-item"> <span class="text-red"><b><i class="bi bi-house-door-fill"></i>
+                                   <a href="index.html">    Home</a> </b></span> </li>&nbsp;|&nbsp;
+                                   <li class="nav-item dropdown">
+                                    <a class="text-red" href="" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <p><i class="bi bi-person-circle"></i><b>Hi, SHASHANK</b><i
+                                                class="bi bi-caret-down-fill"></i></p>
+    
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item text-red" href="profile.html"><i
+                                                class="bi-person-circle"></i>
+                                            Profile</a>
+                                        <a class="dropdown-item text-red" href="changepassword.html"><i
+                                                class="bi-lock-fill"></i>
+                                            Change Password</a>
+                                        <a class="dropdown-item text-red" href="manage_booking.html"><i
+                                                class="bi-gear-fill"></i>
+                                            Manage Booking</a>
+                                        <a class="dropdown-item text-red" href="add-topup.html"><i
+                                                class="bi bi-credit-card"></i>
+                                            Add Topup</a>
+                                        <a class="dropdown-item text-red" href="login.html"><i
+                                                class="bi bi-box-arrow-right"></i>
+                                            Logout</a>
+                                    </div>
+                                </li> &nbsp;|&nbsp;
+                            <li class="agent-credit-limit agentBalance nav-item">
+                                <a class=" text-red" enabled="false"><i class="bi bi-wallet2"></i><b>Credit Limit: <span id="lnkBalance">0.00
+                                            AED</span> </b> </a>
+                            </li>&nbsp;|&nbsp;
+
+
+
+                            <li class="nav-item">
+                                <a class="btnn divAgentList internalPage" style="display: block;">
+                                    <marquee behavior="" direction="">SHASHANK Gupta - FREEL</marquee>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+           
+            </div>
+        </div>
+     
+    </nav>
+    <div class="toggled">
+       
+            <section class="section " >
+                <div class="card-body">
+                    <div class="row mt-5">
+                          <div class="col-md-1"></div>
+                           <div class="col-md-7"> <p><b>Flight From Mumbai to Delhi| 07-aug-2023</b></p></div>
+                        <div class="col-md-3 ml-auto"> <button class="btnnn ">08-aug-2023></button><button class="btnnn"> <06-aug-2023</button></div>
+                        <div class="col-md-1"></div>
+                    </div>
+             
+                    <div class="container flight" >
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <input type="checkbox">
+
+                                        <img src="/assets/images/indigo-logo.png" alt=""
+                                            style="height: 20px;">
+                                    </div>
+
+                                    <div class="col-md-10">
+                                        <span><b>INDIGO</b></span>
+                                        <ul
+                                            style="list-style: none; display: flex; font-size: 11px; padding-left: 0rem;">
+                                            <li class="list"><span>Economy</span></li>
+                                            <li class="list">|</li>
+                                            <li class="list"><span>6E- 986</span></li>
+                                            <li class="list">|</li>
+                                            <li class="list"><span> No Stop</span></li>
+                                            <li class="list"> <span>FAE0828</span></li>
+                                            <li class="list"><span>Indigo</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1" style="font-size: 12px;">
+                                <strong>Bom</strong>
+                                <span>16:55 hrs</span>
+                            </div>
+                            <div class="col-md-1" style="font-size: 10px;">
+                                <span><img src="/assets/images/zero.png" alt=""></span>
+                                <span><i class="far fa-clock"></i>02h 10m</span>
+                            </div>
+
+                            <div class="col-md-1" style="font-size: 12px;">
+                                <strong>Maa</strong>
+                                <span>16:55 hrs</span>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="/assets/images/check.png" alt="" class="mt-2">
+                            </div>
+                            <div class="col-md-3">
+                                <span>
+                                    <span><img src="/assets/images/N.png" alt=""></span>
+                                    <span>AED</span>
+                                    <span>621.00</span>
+                                </span>
+                                <button class="btnnn text-white"><a href="/complete_booking_flight.html">Book Now</a> </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="det" onclick="details()" style="cursor: pointer;"><b>Flight
+                                        Details</b></span>
+                                     
+                            </div>
+                            <div class="col-md-6" style="display: none;">
+                                <span class="det"><b>Flight Details</b></span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="ref" style="float: right;">REFUNDABLE |</span>
+                            </div>
+                        </div>
+                        <div style="border-top: 1px dashed;">
+                            <ul style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+                                <li class="list"><span class="list"><input type="checkbox"></span><span class="list">AED
+                                        621.00</span><span class="list"> <img src="/assets/images/N.png"
+                                            alt="" title="Normal fare"></span><span class="list">|</span></li>
+                                <li class="list"><span class="list"><input type="checkbox"></span><span class="list">AED
+                                        621.00</span><span class="list"> <img src="/assets/images/F.png"
+                                            alt="" title="Flexy fare"></span></li>
+                                <li class="list"></li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div id="flight-details" style="display: none;">
+                            <div class="row">
+                                <button class="itinerary but active ml-4" onclick="iti()">Itinerary</button>
+                                <button class="but" onclick="iti1()">fare details</button>
+                                <button class="but" onclick="iti2()">fare reels</button>
+                                <button class="but" onclick="iti3()">baggage details</button>
+                            </div>
+
+                            <div id="itinerary" class="row p-2" style="font-size: 12px;">
+                                <div class="col-md-12">
+                                    <ul style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+
+                                        <span class="list"><img src="/assets/images/indigo-logo.png" alt=""
+                                                style="height: 20px;"></span>
+                                        <li class="list">
+                                            <span class="list">6E - 223</span>
+                                            <span class="list"><i class="fas fa-circle"></i></span>
+                                        </li>
+                                        <li class="list">
+                                            <span class="list">- T</span>
+                                            <span class="list"><i class="fas fa-circle"></i></span>
+                                        </li>
+                                        <li class="list">
+                                            <span class="list">Economy</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <strong>BOM 05:00</strong><br>
+                                            <span>Sat, 5 Aug'23</span><br>
+                                            <span>Terminal 2</span>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span><img src="/assets/images/zero.png" alt=""></span><br>
+                                            <span><i class="far fa-clock"></i>02h 10m</span>
+                                        </div>
+                                        <div class="col-md-5" style="text-align: right;">
+                                            <strong>MAA 22:00</strong><br>
+                                            <span>Fri, 4 Aug'23</span><br>
+                                            <span>Terminal 2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="fare" style="display: none;">
+                                <div class="row p-2" style="font-size: 12px; ">
+                                    <table style="width: 100%">
+                                        <colgroup>
+                                            <col span="1">
+                                        </colgroup>
+                                        <tr>
+                                            <th>Pax Type</th>
+                                            <th>Basic Fare (AED)</th>
+                                            <th>Tax (AED)</th>
+                                            <th>Total Per Pax</th>
+                                            <th>No Of Pax</th>
+                                            <th>Total (AED)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Adult</td>
+                                            <td>223.00</td>
+                                            <td>36.00</td>
+                                            <td>259.00</td>
+                                            <td>1</td>
+                                            <td>259.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>223.00</td>
+                                            <td>36.00</td>
+                                            <td>259.00</td>
+                                            <td>1</td>
+                                            <td>259.00</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="fare-reels" style="display: none;">
+                                <div class="p-2" style="font-size: 12px !important;color: #FF0004;font-style: italic;">
+                                    <strong>Note:</strong>
+                                    <p><i>The above Fare Rules are just for your guideline and is subject to changes by
+                                            the Airline
+                                            without prior notice. We will try to keep this section updated regularly,
+                                            Riya Travels and
+                                            Tours undertakes no liability for loss that you may suffer due to incorrect
+                                            information in
+                                            fare rule and K3 and RAF will be additional to penalty charges</i></p>
+                                    <h6 style="color: black;">MAA-CCU</h6>
+                                    <div class="border p-2">
+                                        <p>Fare Rules not Available</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="baggage-details" style="display: none;">
+                                <div class="row p-2" style="font-size: 12px;">
+                                    <div class="col-md-12">
+                                        <ul
+                                            style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+
+                                            <span class="list"><img src="/assets/images/indigo-logo.png"
+                                                    alt="" style="height: 20px;"></span>
+                                            <li class="list">
+                                                <span class="list">6E - 223</span>
+                                                <span class="list"><i class="fas fa-circle"></i></span>
+                                            </li>
+                                            <li class="list">
+                                                <span class="list">- T</span>
+                                                <span class="list"><i class="fas fa-circle"></i></span>
+                                            </li>
+                                            <li class="list">
+                                                <span class="list">Economy</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <span><img src="/assets/images/check.png" alt=""></span>
+                                        <span>Cabin: 7 kg</span>
+                                        <span><b>Check-in: 15 KG</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container flight">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <input type="checkbox">
+
+                                        <img src="/assets/images/AI.png" alt=""
+                                            style="height: 20px;">
+                                    </div>
+
+                                    <div class="col-md-10">
+                                        <span><b>AIR INDIA</b> </span>
+                                        <ul
+                                            style="list-style: none; display: flex; font-size: 11px; padding-left: 0rem;">
+                                            <li class="list"><span>Economy</span></li>
+                                            <li class="list">|</li>
+                                            <li class="list"><span>6E- 986</span></li>
+                                            <li class="list">|</li>
+                                            <li class="list"><span> No Stop</span></li>
+                                            <li class="list"> <span>FAE0828</span></li>
+                                            <li class="list"><span>Indigo</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1" style="font-size: 12px;">
+                                <strong>Bom</strong>
+                                <span>16:55 hrs</span>
+                            </div>
+                            <div class="col-md-1" style="font-size: 10px;">
+                                <span><img src="/assets/images/zero.png" alt=""></span>
+                                <span><i class="far fa-clock"></i>02h 10m</span>
+                            </div>
+
+                            <div class="col-md-1" style="font-size: 12px;">
+                                <strong>Maa</strong>
+                                <span>16:55 hrs</span>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="/assets/images/check.png" alt="" class="mt-2">
+                            </div>
+                            <div class="col-md-3">
+                                <span>
+                                    <span><img src="/assets/images/N.png" alt=""></span>
+                                    <span>AED</span>
+                                    <span>621.00</span>
+                                </span>
+                                <button class="btnnn  text-white"><a href="/complete_booking_flight.html">Book Now</a> </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="det" onclick="details1()" style="cursor: pointer;"><b>Flight
+                                        Details</b></span>
+                            </div>
+                            <div class="col-md-6" style="display: none;">
+                                <span class="det"><b>Flight Details</b></span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="ref" style="float: right;">REFUNDABLE |</span>
+                            </div>
+                        </div>
+                        <div style="border-top: 1px dashed;">
+                            <ul style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+                                <li class="list"><span class="list"><input type="checkbox"></span><span class="list">AED
+                                        621.00</span><span class="list"> <img src="/assets/images/N.png"
+                                            alt="" title="Normal fare"></span><span class="list">|</span></li>
+                                <li class="list"><span class="list"><input type="checkbox"></span><span class="list">AED
+                                        621.00</span><span class="list"> <img src="/assets/images/F.png"
+                                            alt="" title="Flexy fare"></span></li>
+                                <li class="list"></li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div id="flight-details1" style="display: none;">
+                            <div class="row">
+                                <button class="itinerary but active ml-4" onclick="tti()">Itinerary</button>
+                                <button class="but" onclick="tti1()">fare details</button>
+                                <button class="but" onclick="tti2()">fare reels</button>
+                                <button class="but" onclick="tti3()">baggage details</button>
+                            </div>
+
+                            <div id="itinerary" class="row p-2" style="font-size: 12px;">
+                                <div class="col-md-12">
+                                    <ul style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+
+                                        <span class="list"><img src="/assets/images/indigo-logo.png" alt=""
+                                                style="height: 20px;"></span>
+                                        <li class="list">
+                                            <span class="list">6E - 223</span>
+                                            <span class="list"><i class="fas fa-circle"></i></span>
+                                        </li>
+                                        <li class="list">
+                                            <span class="list">- T</span>
+                                            <span class="list"><i class="fas fa-circle"></i></span>
+                                        </li>
+                                        <li class="list">
+                                            <span class="list">Economy</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <strong>BOM 05:00</strong><br>
+                                            <span>Sat, 5 Aug'23</span><br>
+                                            <span>Terminal 2</span>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span><img src="/assets/images/zero.png" alt=""></span><br>
+                                            <span><i class="far fa-clock"></i>02h 10m</span>
+                                        </div>
+                                        <div class="col-md-5" style="text-align: right;">
+                                            <strong>MAA 22:00</strong><br>
+                                            <span>Fri, 4 Aug'23</span><br>
+                                            <span>Terminal 2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="fare" style="display: none;">
+                                <div class="row p-2" style="font-size: 12px; ">
+                                    <table style="width: 100%">
+                                        <colgroup>
+                                            <col span="1">
+                                        </colgroup>
+                                        <tr>
+                                            <th>Pax Type</th>
+                                            <th>Basic Fare (AED)</th>
+                                            <th>Tax (AED)</th>
+                                            <th>Total Per Pax</th>
+                                            <th>No Of Pax</th>
+                                            <th>Total (AED)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Adult</td>
+                                            <td>223.00</td>
+                                            <td>36.00</td>
+                                            <td>259.00</td>
+                                            <td>1</td>
+                                            <td>259.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>223.00</td>
+                                            <td>36.00</td>
+                                            <td>259.00</td>
+                                            <td>1</td>
+                                            <td>259.00</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="fare-reels" style="display: none;">
+                                <div class="p-2" style="font-size: 12px !important;color: #FF0004;font-style: italic;">
+                                    <strong>Note:</strong>
+                                    <p><i>The above Fare Rules are just for your guideline and is subject to changes by
+                                            the Airline
+                                            without prior notice. We will try to keep this section updated regularly,
+                                            Riya Travels and
+                                            Tours undertakes no liability for loss that you may suffer due to incorrect
+                                            information in
+                                            fare rule and K3 and RAF will be additional to penalty charges</i></p>
+                                    <h6 style="color: black;">MAA-CCU</h6>
+                                    <div class="border p-2">
+                                        <p>Fare Rules not Available</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="baggage-details" style="display: none;">
+                                <div class="row p-2" style="font-size: 12px;">
+                                    <div class="col-md-12">
+                                        <ul
+                                            style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+
+                                            <span class="list"><img src="/assets/images/indigo-logo.png"
+                                                    alt="" style="height: 20px;"></span>
+                                            <li class="list">
+                                                <span class="list">6E - 223</span>
+                                                <span class="list"><i class="fas fa-circle"></i></span>
+                                            </li>
+                                            <li class="list">
+                                                <span class="list">- T</span>
+                                                <span class="list"><i class="fas fa-circle"></i></span>
+                                            </li>
+                                            <li class="list">
+                                                <span class="list">Economy</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <span><img src="/assets/images/check.png" alt=""></span>
+                                        <span>Cabin: 7 kg</span>
+                                        <span><b>Check-in: 15 KG</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container flight" >
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <input type="checkbox">
+
+                                        <img src="/assets/images/SG.png" alt=""
+                                            style="height: 20px;">
+                                    </div>
+
+                                    <div class="col-md-10">
+                                        <span><b>SPICEJET</b> </span>
+                                        <ul
+                                            style="list-style: none; display: flex; font-size: 11px; padding-left: 0rem;">
+                                            <li class="list"><span>Economy</span></li>
+                                            <li class="list">|</li>
+                                            <li class="list"><span>6E- 986</span></li>
+                                            <li class="list">|</li>
+                                            <li class="list"><span> No Stop</span></li>
+                                            <li class="list"> <span>FAE0828</span></li>
+                                            <li class="list"><span>Indigo</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1" style="font-size: 12px;">
+                                <strong>Bom</strong>
+                                <span>16:55 hrs</span>
+                            </div>
+                            <div class="col-md-1" style="font-size: 10px;">
+                                <span><img src="/assets/images/zero.png" alt=""></span>
+                                <span><i class="far fa-clock"></i>02h 10m</span>
+                            </div>
+
+                            <div class="col-md-1" style="font-size: 12px;">
+                                <strong>Maa</strong>
+                                <span>16:55 hrs</span>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="/assets/images/check.png" alt="" class="mt-2">
+                            </div>
+                            <div class="col-md-3">
+                                <span>
+                                    <span><img src="/assets/images/N.png" alt=""></span>
+                                    <span>AED</span>
+                                    <span>621.00</span>
+                                </span>
+                                <button class="btnnn text-white"><a href="/complete_booking_flight.html">Book Now</a> </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="det" onclick="details2()" style="cursor: pointer;"><b>Flight
+                                        Details</b></span>
+                            </div>
+                            <div class="col-md-6" style="display: none;">
+                                <span class="det"><b>Flight Details</b></span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="ref" style="float: right;">REFUNDABLE |</span>
+                            </div>
+                        </div>
+                        <div style="border-top: 1px dashed;">
+                            <ul style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+                                <li class="list"><span class="list"><input type="checkbox"></span><span class="list">AED
+                                        621.00</span><span class="list"> <img src="/assets/images/N.png"
+                                            alt="" title="Normal fare"></span><span class="list">|</span></li>
+                                <li class="list"><span class="list"><input type="checkbox"></span><span class="list">AED
+                                        621.00</span><span class="list"> <img src="/assets/images/F.png"
+                                            alt="" title="Flexy fare"></span></li>
+                                <li class="list"></li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div id="flight-details2" style="display: none;">
+                            <div class="row">
+                                <button class="itinerary but active ml-4" onclick="tti()">Itinerary</button>
+                                <button class="but" onclick="tti1()">fare details</button>
+                                <button class="but" onclick="tti2()">fare reels</button>
+                                <button class="but" onclick="tti3()">baggage details</button>
+                            </div>
+
+                            <div id="itinerary" class="row p-2" style="font-size: 12px;">
+                                <div class="col-md-12">
+                                    <ul style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+
+                                        <span class="list"><img src="/assets/images/indigo-logo.png" alt=""
+                                                style="height: 20px;"></span>
+                                        <li class="list">
+                                            <span class="list">6E - 223</span>
+                                            <span class="list"><i class="fas fa-circle"></i></span>
+                                        </li>
+                                        <li class="list">
+                                            <span class="list">- T</span>
+                                            <span class="list"><i class="fas fa-circle"></i></span>
+                                        </li>
+                                        <li class="list">
+                                            <span class="list">Economy</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <strong>BOM 05:00</strong><br>
+                                            <span>Sat, 5 Aug'23</span><br>
+                                            <span>Terminal 2</span>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span><img src="/assets/images/zero.png" alt=""></span><br>
+                                            <span><i class="far fa-clock"></i>02h 10m</span>
+                                        </div>
+                                        <div class="col-md-5" style="text-align: right;">
+                                            <strong>MAA 22:00</strong><br>
+                                            <span>Fri, 4 Aug'23</span><br>
+                                            <span>Terminal 2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="fare" style="display: none;">
+                                <div class="row p-2" style="font-size: 12px; ">
+                                    <table style="width: 100%">
+                                        <colgroup>
+                                            <col span="1">
+                                        </colgroup>
+                                        <tr>
+                                            <th>Pax Type</th>
+                                            <th>Basic Fare (AED)</th>
+                                            <th>Tax (AED)</th>
+                                            <th>Total Per Pax</th>
+                                            <th>No Of Pax</th>
+                                            <th>Total (AED)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Adult</td>
+                                            <td>223.00</td>
+                                            <td>36.00</td>
+                                            <td>259.00</td>
+                                            <td>1</td>
+                                            <td>259.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>223.00</td>
+                                            <td>36.00</td>
+                                            <td>259.00</td>
+                                            <td>1</td>
+                                            <td>259.00</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="fare-reels" style="display: none;">
+                                <div class="p-2" style="font-size: 12px !important;color: #FF0004;font-style: italic;">
+                                    <strong>Note:</strong>
+                                    <p><i>The above Fare Rules are just for your guideline and is subject to changes by
+                                            the Airline
+                                            without prior notice. We will try to keep this section updated regularly,
+                                            Riya Travels and
+                                            Tours undertakes no liability for loss that you may suffer due to incorrect
+                                            information in
+                                            fare rule and K3 and RAF will be additional to penalty charges</i></p>
+                                    <h6 style="color: black;">MAA-CCU</h6>
+                                    <div class="border p-2">
+                                        <p>Fare Rules not Available</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="baggage-details" style="display: none;">
+                                <div class="row p-2" style="font-size: 12px;">
+                                    <div class="col-md-12">
+                                        <ul
+                                            style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+
+                                            <span class="list"><img src="/assets/images/indigo-logo.png"
+                                                    alt="" style="height: 20px;"></span>
+                                            <li class="list">
+                                                <span class="list">6E - 223</span>
+                                                <span class="list"><i class="fas fa-circle"></i></span>
+                                            </li>
+                                            <li class="list">
+                                                <span class="list">- T</span>
+                                                <span class="list"><i class="fas fa-circle"></i></span>
+                                            </li>
+                                            <li class="list">
+                                                <span class="list">Economy</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <span><img src="../assets/images/check.png" alt=""></span>
+                                        <span>Cabin: 7 kg</span>
+                                        <span><b>Check-in: 15 KG</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container flight" >
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <input type="checkbox">
+
+                                        <img src="/assets/images/SG.png" alt=""
+                                            style="height: 20px;">
+                                    </div>
+
+                                    <div class="col-md-10">
+                                        <span><b>SPICEJET</b> </span>
+                                        <ul
+                                            style="list-style: none; display: flex; font-size: 11px; padding-left: 0rem;">
+                                            <li class="list"><span>Economy</span></li>
+                                            <li class="list">|</li>
+                                            <li class="list"><span>6E- 986</span></li>
+                                            <li class="list">|</li>
+                                            <li class="list"><span> No Stop</span></li>
+                                            <li class="list"> <span>FAE0828</span></li>
+                                            <li class="list"><span>Indigo</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1" style="font-size: 12px;">
+                                <strong>Bom</strong>
+                                <span>16:55 hrs</span>
+                            </div>
+                            <div class="col-md-1" style="font-size: 10px;">
+                                <span><img src="/assets/images/zero.png" alt=""></span>
+                                <span><i class="far fa-clock"></i>02h 10m</span>
+                            </div>
+
+                            <div class="col-md-1" style="font-size: 12px;">
+                                <strong>Maa</strong>
+                                <span>16:55 hrs</span>
+                            </div>
+                            <div class="col-md-1">
+                                <img src="/assets/images/check.png" alt="" class="mt-2">
+                            </div>
+                            <div class="col-md-3">
+                                <span>
+                                    <span><img src="/assets/images/N.png" alt=""></span>
+                                    <span>AED</span>
+                                    <span>621.00</span>
+                                </span>
+                                <button class="btnnn text-white"><a href="/complete_booking_flight.html">Book Now</a> </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="det" onclick="details2()" style="cursor: pointer;"><b>Flight
+                                        Details</b></span>
+                            </div>
+                            <div class="col-md-6" style="display: none;">
+                                <span class="det"><b>Flight Details</b></span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="ref" style="float: right;">REFUNDABLE |</span>
+                            </div>
+                        </div>
+                        <div style="border-top: 1px dashed;">
+                            <ul style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+                                <li class="list"><span class="list"><input type="checkbox"></span><span class="list">AED
+                                        621.00</span><span class="list"> <img src="/assets/images/N.png"
+                                            alt="" title="Normal fare"></span><span class="list">|</span></li>
+                                <li class="list"><span class="list"><input type="checkbox"></span><span class="list">AED
+                                        621.00</span><span class="list"> <img src="/assets/images/F.png"
+                                            alt="" title="Flexy fare"></span></li>
+                                <li class="list"></li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div id="flight-details2" style="display: none;">
+                            <div class="row">
+                                <button class="itinerary but active ml-4" onclick="tti()">Itinerary</button>
+                                <button class="but" onclick="tti1()">fare details</button>
+                                <button class="but" onclick="tti2()">fare reels</button>
+                                <button class="but" onclick="tti3()">baggage details</button>
+                            </div>
+
+                            <div id="itinerary" class="row p-2" style="font-size: 12px;">
+                                <div class="col-md-12">
+                                    <ul style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+
+                                        <span class="list"><img src="/assets/images/indigo-logo.png" alt=""
+                                                style="height: 20px;"></span>
+                                        <li class="list">
+                                            <span class="list">6E - 223</span>
+                                            <span class="list"><i class="fas fa-circle"></i></span>
+                                        </li>
+                                        <li class="list">
+                                            <span class="list">- T</span>
+                                            <span class="list"><i class="fas fa-circle"></i></span>
+                                        </li>
+                                        <li class="list">
+                                            <span class="list">Economy</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <strong>BOM 05:00</strong><br>
+                                            <span>Sat, 5 Aug'23</span><br>
+                                            <span>Terminal 2</span>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span><img src="/assets/images/zero.png" alt=""></span><br>
+                                            <span><i class="far fa-clock"></i>02h 10m</span>
+                                        </div>
+                                        <div class="col-md-5" style="text-align: right;">
+                                            <strong>MAA 22:00</strong><br>
+                                            <span>Fri, 4 Aug'23</span><br>
+                                            <span>Terminal 2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="fare" style="display: none;">
+                                <div class="row p-2" style="font-size: 12px; ">
+                                    <table style="width: 100%">
+                                        <colgroup>
+                                            <col span="1">
+                                        </colgroup>
+                                        <tr>
+                                            <th>Pax Type</th>
+                                            <th>Basic Fare (AED)</th>
+                                            <th>Tax (AED)</th>
+                                            <th>Total Per Pax</th>
+                                            <th>No Of Pax</th>
+                                            <th>Total (AED)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Adult</td>
+                                            <td>223.00</td>
+                                            <td>36.00</td>
+                                            <td>259.00</td>
+                                            <td>1</td>
+                                            <td>259.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>223.00</td>
+                                            <td>36.00</td>
+                                            <td>259.00</td>
+                                            <td>1</td>
+                                            <td>259.00</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="fare-reels" style="display: none;">
+                                <div class="p-2" style="font-size: 12px !important;color: #FF0004;font-style: italic;">
+                                    <strong>Note:</strong>
+                                    <p><i>The above Fare Rules are just for your guideline and is subject to changes by
+                                            the Airline
+                                            without prior notice. We will try to keep this section updated regularly,
+                                            Riya Travels and
+                                            Tours undertakes no liability for loss that you may suffer due to incorrect
+                                            information in
+                                            fare rule and K3 and RAF will be additional to penalty charges</i></p>
+                                    <h6 style="color: black;">MAA-CCU</h6>
+                                    <div class="border p-2">
+                                        <p>Fare Rules not Available</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="baggage-details" style="display: none;">
+                                <div class="row p-2" style="font-size: 12px;">
+                                    <div class="col-md-12">
+                                        <ul
+                                            style="list-style: none; display: flex; font-size: 12px; padding-left: 0rem;">
+
+                                            <span class="list"><img src="/assets/images/indigo-logo.png"
+                                                    alt="" style="height: 20px;"></span>
+                                            <li class="list">
+                                                <span class="list">6E - 223</span>
+                                                <span class="list"><i class="fas fa-circle"></i></span>
+                                            </li>
+                                            <li class="list">
+                                                <span class="list">- T</span>
+                                                <span class="list"><i class="fas fa-circle"></i></span>
+                                            </li>
+                                            <li class="list">
+                                                <span class="list">Economy</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <span><img src="../assets/images/check.png" alt=""></span>
+                                        <span>Cabin: 7 kg</span>
+                                        <span><b>Check-in: 15 KG</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+       
+    </div>
+     
+  <footer>
+    <div class="footer">
+        <div>
+
+            <ul>
+                <li class="footer-li"><button class="bnt">powered-by <span><img src="../assets/images/logorr.png"
+
+                    height="25px" alt=""></span></button></li>
+
+    <li class="footer-li"><strong>Quick Links:</strong></li>
+
+    <li class="footer-li">Home<b>|</b></li>
+
+    <li class="footer-li">About<b>|</b></li>
+
+    <li class="footer-li">Services<b>|</b></li>
+
+    <li class="footer-li">Benefits<b>|</b></li>
+
+    <li class="footer-li"><b>Contect Us |</b></li>
+            </ul>
+
+        </div>
+        <div class="row footer-row">
+            <div class="col-md-3">
+                <h3>India</h3>
+                <div class="row">
+                    <div class="col-md-1"><p><i class="bi bi-phone"></i></p></div>
+                    <div class="col-md-10"><span>+91 22-71200911 / 022-61200911</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-mailbox"></i></p></div>
+                    <div class="col-md-10"><span>tn.air@riya.travel</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-house-fill"></i></p></div>
+                    <div class="col-md-10"><span>tn.hotels@riya.travel</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-geo-alt-fill"></i></i></p></div>
+                    <div class="col-md-10"><span> M/1, Leela Business Park, Andheri - Kurla Rd, Andheri
+                        East, Mumbai, Maharashtra 400059</span></div> 
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3>USA</h3>
+                <div class="row">
+                    <div class="col-md-1"><p><i class="bi bi-phone"></i></p></div>
+                    <div class="col-md-10"><span>+1-972-947-2100</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-mailbox"></i></p></div>
+                    <div class="col-md-10"><span>info.usa@riya.travel</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-house-fill"></i></p></div>
+                    <div class="col-md-10"><span>1503 W Airport Fwy, Irving, TX 75062, USA</span></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3>Canada</h3>
+                <div class="row">
+                    <div class="col-md-1"><p><i class="bi bi-phone"></i></p></div>
+                    <div class="col-md-10"><span>1-204-415-5808</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-mailbox"></i></p></div>
+                    <div class="col-md-10"><span>info.ca@riya.travel</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-house-fill"></i></p></div>
+                    <div class="col-md-10"><span>Tyndall Market Mall, Unit 3A - 850 Keewatin Street, Winnipeg, MB - R2R 0Z5, Canada</span></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3>UAE</h3>
+                <div class="row">
+                    <div class="col-md-1"><p><i class="bi bi-phone"></i></p></div>
+                    <div class="col-md-10"><span>+971 4 319 2777</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-mailbox"></i></p></div>
+                    <div class="col-md-10"><span>trvlnxt.uae@riya.travel</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-house-fill"></i></p></div>
+                    <div class="col-md-10"><span> Unit No.3, Ground Floor, Shipping Tower, Mina Road, PO Box-186572, Bur Dubai, Dubai</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer> 
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+crossorigin="anonymous"></script> -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#multiple-checkboxes').multiselect();
+    });  
+</script>
+<script>
+    // Toggle dropdown menu on click
+    var dropdownToggle = document.querySelector('.custom-dropdown .dropdown-toggle');
+    dropdownToggle.addEventListener('click', function () {
+        var dropdown = this.parentNode;
+        dropdown.classList.toggle('open');
+    });
+
+    // Close dropdown menu when clicking outside
+    window.addEventListener('click', function (event) {
+        var dropdown = document.querySelector('.custom-dropdown');
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove('open');
+        }
+    });
+</script>
+<script>
+    function closeTab() {
+        // Close the tab or perform any other desired action here
+        window.close();
+    }
+</script>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+<script src="assets/js/collapse.js"></script>
+
+<script>
+    var x, i, j, l, ll, selElmnt, a, b, c;
+
+    x = document.getElementsByClassName("custom-select");
+    l = x.length;
+    for (i = 0; i < l; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        ll = selElmnt.length;
+
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < ll; j++) {
+
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function (e) {
+
+                var y, i, k, s, h, sl, yl;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                sl = s.length;
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < sl; i++) {
+                    if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        yl = y.length;
+                        for (k = 0; k < yl; k++) {
+                            y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                    }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function (e) {
+            /*when the select box is clicked, close any other select boxes,
+            and open/close the current select box:*/
+            e.stopPropagation();
+            closeAllSelect(this);
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+        });
+    }
+    function closeAllSelect(elmnt) {
+        /*a function that will close all select boxes in the document,
+        except the current select box:*/
+        var x, y, i, xl, yl, arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        xl = x.length;
+        yl = y.length;
+        for (i = 0; i < yl; i++) {
+            if (elmnt == y[i]) {
+                arrNo.push(i)
+            } else {
+                y[i].classList.remove("select-arrow-active");
+            }
+        }
+        for (i = 0; i < xl; i++) {
+            if (arrNo.indexOf(i)) {
+                x[i].classList.add("select-hide");
+            }
+        }
+    }
+    /*if the user clicks anywhere outside the select box,
+    then close all select boxes:*/
+    document.addEventListener("click", closeAllSelect);
+</script>
+
+<script>
+
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+
+                }
+            }
+        }
+    }
+    function myFunction2() {
+        const inputElement = document.getElementById("myNumber");
+        let value = parseInt(inputElement.value);
+        if (value < 9) {
+            value++;
+            inputElement.value = value;
+        }
+    }
+
+    function myFunction3() {
+        const inputElement = document.getElementById("myNumber");
+        let value = parseInt(inputElement.value);
+        if (value > 0) {
+            value--;
+            inputElement.value = value;
+        }
+    }
+    function myFunction4() {
+        const inputElement = document.getElementById("mychild");
+        let value = parseInt(inputElement.value);
+        if (value < 9) {
+            value++;
+            inputElement.value = value;
+        }
+    }
+
+    function myFunction5() {
+        const inputElement = document.getElementById("mychild");
+        let value = parseInt(inputElement.value);
+        if (value > 0) {
+            value--;
+            inputElement.value = value;
+        }
+    }
+    function myFunction6() {
+        const inputElement = document.getElementById("fant");
+        let value = parseInt(inputElement.value);
+        if (value < 9) {
+            value++;
+            inputElement.value = value;
+        }
+    }
+
+    function myFunction7() {
+        const inputElement = document.getElementById("fant");
+        let value = parseInt(inputElement.value);
+        if (value > 0) {
+            value--;
+            inputElement.value = value;
+        }
+    }
+</script>
+<script>
+    function iti() {
+        document.getElementById("fare").style.display = "none";
+        document.getElementById("fare-reels").style.display = "none";
+        document.getElementById("baggage-details").style.display = "none";
+        document.getElementById("itinerary").style.display = "block";
+    }
+</script>
+<script>
+    function iti1() {
+        document.getElementById("fare").style.display = "block";
+        document.getElementById("fare-reels").style.display = "none";
+        document.getElementById("baggage-details").style.display = "none";
+        document.getElementById("itinerary").style.display = "none";
+    }
+</script>
+<script>
+    function iti2() {
+        document.getElementById("fare").style.display = "none";
+        document.getElementById("fare-reels").style.display = "block";
+        document.getElementById("baggage-details").style.display = "none";
+        document.getElementById("itinerary").style.display = "none";
+    }
+</script>
+<script>
+    function iti3() {
+        document.getElementById("fare").style.display = "none";
+        document.getElementById("fare-reels").style.display = "none";
+        document.getElementById("baggage-details").style.display = "block";
+        document.getElementById("itinerary").style.display = "none";
+    }
+</script>
+
+<!-- <script>
+    function show-details() {
+        document.getElementById("flight-details").style.display = "block";
+        document.getElementById("hide-details").style.display = "none";
+    }
+</script>
+<script>
+    function hide-details() {
+        document.getElementById("flight-details").style.display = "none";
+        document.getElementById("fare-reels").style.display = "block";
+    }
+</script> 
+<script>
+    function hide-details() {
+        document.getElementById("flight-details").style.display = "none";
+        document.getElementById("fare-reels").style.display = "block";
+    }
+</script>-->
+
+<script>
+    function details() {
+        var x = document.getElementById("flight-details");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+<script>
+    function details1() {
+        var x = document.getElementById("flight-details1");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+<script>
+    var header = document.getElementById("flight-details");
+    var btns = header.getElementsByClassName("but");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+</script>
+
+</html>

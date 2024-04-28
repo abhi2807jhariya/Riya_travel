@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/poppins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white" id="head-wrraper">
+    <div class="col-md-2 d-flex">
+        <a class="navbar-brand" href="#"><img src="/assets/images/logorr.png" class="w-50" alt="logo"></a>
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="mr-auto navbar-nav">
+                        <li class="nav-item"> <span class="text-red"><b><i class="bi bi-house-door-fill"></i>
+                               <a href="index.html">    Home</a> </b></span> </li>&nbsp;|&nbsp;
+                               <li class="nav-item dropdown">
+                                <a class="text-red" href="" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <p><i class="bi bi-person-circle"></i><b>Hi, SHASHANK</b><i
+                                            class="bi bi-caret-down-fill"></i></p>
+
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item text-red" href="profile.html"><i
+                                            class="bi-person-circle"></i>
+                                        Profile</a>
+                                    <a class="dropdown-item text-red" href="changepassword.html"><i
+                                            class="bi-lock-fill"></i>
+                                        Change Password</a>
+                                    <a class="dropdown-item text-red" href="manage_booking.html"><i
+                                            class="bi-gear-fill"></i>
+                                        Manage Booking</a>
+                                    <a class="dropdown-item text-red" href="add-topup.html"><i
+                                            class="bi bi-credit-card"></i>
+                                        Add Topup</a>
+                                    <a class="dropdown-item text-red" href="login.html"><i
+                                            class="bi bi-box-arrow-right"></i>
+                                        Logout</a>
+                                </div>
+                            </li> &nbsp;|&nbsp;
+                        <li class="agent-credit-limit agentBalance nav-item">
+                            <a class=" text-red" enabled="false"><i class="bi bi-wallet2"></i><b>Credit Limit: <span id="lnkBalance">0.00
+                                        AED</span> </b> </a>
+                        </li>&nbsp;|&nbsp;
+
+
+
+                        <li class="nav-item">
+                            <a class="btnn divAgentList internalPage" style="display: block;">
+                                <marquee behavior="" direction="">SHASHANK Gupta - FREEL</marquee>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+       
+        </div>
+    </div>
+ 
+</nav>
+    <div class="container">
+        <div id="page-content-wrapper">
+      
+            <div class="card shadow mt-5" style="height: 32rem; border-radius: 20px;">
+                <div class="card-body mynav">
+                      <!-- navigation start here -->
+                      <br><br><br>
+                  
+                     
+                        <h4><b>Bank Account Details</b></h4><hr>
+                        <p>Payment have to be made into our degignated bank account by either cash , bank transfer or by
+                          cheque</p>
+                        <div class="row">
+                          <div class="col-md-6 border">
+                            <table id="customers">
+                              <tr>
+                                <th>Bank Name</th>
+                                <td>FEDERAL BANK</td>
+                              </tr>
+                              <tr>
+                                <th>Bank Account Number</th>
+                                <td>1099020082071</td>
+                              </tr>
+                              <tr>
+                                <th>IFSC CODE</th>
+                                <td>EFRL0001099</td>
+                              </tr>
+                              <tr>
+                                <th>Branch Name</th>
+                                <td>Mumbai-Fort</td>
+                              </tr>
+                              <tr>
+                                <th>Bank-logo</th>
+                                <td><img src="../assets/images/federal-bank.png" alt=""></td>
+                              </tr>
+                            </table>
+                            <center>
+                              <button class="btnn m-1"
+                                style="width:200px; padding: 5px; cursor: pointer; box-shadow: 0px 13px 20px #970309B3;">Scan QR code To Pay<span
+                                  style='font-size:20px;'><b>&#8594;</b></span></button>
+                            </center>
+                          </div>
+                          <div class="col-md-6 border">
+                            <p style="color: red; font-size: 12px;"><b>Any NEFT/RTGS transaction use the blow account details to get auto TOPUP IN YOUR AGENCY ID</b></p>
+                            <table id="customers">
+                              <tr>
+                                <th>Bank Name</th>
+                                <td>HDFC BANK</td>
+                              </tr>
+                              <tr>
+                                <th>Bank Account Number</th>
+                                <td>1099020082071</td>
+                              </tr>
+                              <tr>
+                                <th>IFSC CODE</th>
+                                <td>EFRL0001099</td>
+                              </tr>
+                              <tr>
+                                <th>Account type</th>
+                                <td>current</td>
+                              </tr>
+                              <tr>
+                                <th>Branch Name</th>
+                                <td>Mumbai-Fort</td>
+                              </tr>
+                              <tr>
+                                <th>Bank-logo</th>
+                                <td><img src="../assets/images/hdfc-bank.png" alt=""></td>
+                              </tr>
+                            </table>
+                          </div>
+                         
+                        </div> <center>
+  
+                          <div style="color: red; font-size: 12px; padding: 10px;">
+  
+                            <p><b>All cheque should be drawn in favour of "RIYA
+  
+                                TRAVEL & TOURS (INDIA) PVT LTD"</b></p>
+  
+                          </div>
+  
+                        </center>
+  
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br>
+<footer>
+    <div class="footer">
+        <div>
+
+            <ul>
+                <li class="footer-li"><button class="bnt">powered-by <span><img src="../assets/images/logorr.png"
+
+                    height="25px" alt=""></span></button></li>
+
+    <li class="footer-li"><strong>Quick Links:</strong></li>
+
+    <li class="footer-li">Home<b>|</b></li>
+
+    <li class="footer-li">About<b>|</b></li>
+
+    <li class="footer-li">Services<b>|</b></li>
+
+    <li class="footer-li">Benefits<b>|</b></li>
+
+    <li class="footer-li"><b>Contect Us |</b></li>
+            </ul>
+
+        </div>
+        <div class="row footer-row">
+            <div class="col-md-3">
+                <h3>India</h3>
+                <div class="row">
+                    <div class="col-md-1"><p><i class="bi bi-phone"></i></p></div>
+                    <div class="col-md-10"><span>+91 22-71200911 / 022-61200911</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-mailbox"></i></p></div>
+                    <div class="col-md-10"><span>tn.air@riya.travel</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-house-fill"></i></p></div>
+                    <div class="col-md-10"><span>tn.hotels@riya.travel</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-geo-alt-fill"></i></i></p></div>
+                    <div class="col-md-10"><span> M/1, Leela Business Park, Andheri - Kurla Rd, Andheri
+                        East, Mumbai, Maharashtra 400059</span></div> 
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3>USA</h3>
+                <div class="row">
+                    <div class="col-md-1"><p><i class="bi bi-phone"></i></p></div>
+                    <div class="col-md-10"><span>+1-972-947-2100</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-mailbox"></i></p></div>
+                    <div class="col-md-10"><span>info.usa@riya.travel</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-house-fill"></i></p></div>
+                    <div class="col-md-10"><span>1503 W Airport Fwy, Irving, TX 75062, USA</span></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3>Canada</h3>
+                <div class="row">
+                    <div class="col-md-1"><p><i class="bi bi-phone"></i></p></div>
+                    <div class="col-md-10"><span>1-204-415-5808</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-mailbox"></i></p></div>
+                    <div class="col-md-10"><span>info.ca@riya.travel</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-house-fill"></i></p></div>
+                    <div class="col-md-10"><span>Tyndall Market Mall, Unit 3A - 850 Keewatin Street, Winnipeg, MB - R2R 0Z5, Canada</span></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h3>UAE</h3>
+                <div class="row">
+                    <div class="col-md-1"><p><i class="bi bi-phone"></i></p></div>
+                    <div class="col-md-10"><span>+971 4 319 2777</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-mailbox"></i></p></div>
+                    <div class="col-md-10"><span>trvlnxt.uae@riya.travel</span></div>
+
+                    <div class="col-md-1"><p><i class="bi bi-house-fill"></i></p></div>
+                    <div class="col-md-10"><span> Unit No.3, Ground Floor, Shipping Tower, Mina Road, PO Box-186572, Bur Dubai, Dubai</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer> 
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+crossorigin="anonymous"></script> -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#multiple-checkboxes').multiselect();
+    });  
+</script>
+<script>
+    // Toggle dropdown menu on click
+    var dropdownToggle = document.querySelector('.custom-dropdown .dropdown-toggle');
+    dropdownToggle.addEventListener('click', function () {
+        var dropdown = this.parentNode;
+        dropdown.classList.toggle('open');
+    });
+
+    // Close dropdown menu when clicking outside
+    window.addEventListener('click', function (event) {
+        var dropdown = document.querySelector('.custom-dropdown');
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove('open');
+        }
+    });
+</script>
+<script>
+    function closeTab() {
+        // Close the tab or perform any other desired action here
+        window.close();
+    }
+</script>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+<script src="assets/js/collapse.js"></script>
+
+<script>
+    var x, i, j, l, ll, selElmnt, a, b, c;
+
+    x = document.getElementsByClassName("custom-select");
+    l = x.length;
+    for (i = 0; i < l; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        ll = selElmnt.length;
+
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < ll; j++) {
+
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function (e) {
+
+                var y, i, k, s, h, sl, yl;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                sl = s.length;
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < sl; i++) {
+                    if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        yl = y.length;
+                        for (k = 0; k < yl; k++) {
+                            y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                    }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function (e) {
+            /*when the select box is clicked, close any other select boxes,
+            and open/close the current select box:*/
+            e.stopPropagation();
+            closeAllSelect(this);
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+        });
+    }
+    function closeAllSelect(elmnt) {
+        /*a function that will close all select boxes in the document,
+        except the current select box:*/
+        var x, y, i, xl, yl, arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        xl = x.length;
+        yl = y.length;
+        for (i = 0; i < yl; i++) {
+            if (elmnt == y[i]) {
+                arrNo.push(i)
+            } else {
+                y[i].classList.remove("select-arrow-active");
+            }
+        }
+        for (i = 0; i < xl; i++) {
+            if (arrNo.indexOf(i)) {
+                x[i].classList.add("select-hide");
+            }
+        }
+    }
+    /*if the user clicks anywhere outside the select box,
+    then close all select boxes:*/
+    document.addEventListener("click", closeAllSelect);
+</script>
+
+<script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function increment(inputId) {
+        const inputElement = document.getElementById(inputId);
+        let value = parseInt(inputElement.value);
+        if (value < 9) {
+            value++;
+            inputElement.value = value;
+        }
+        updateTotal();
+    }
+
+    function decrement(inputId) {
+        const inputElement = document.getElementById(inputId);
+        let value = parseInt(inputElement.value);
+        if (value > 0) {
+            value--;
+            inputElement.value = value;
+        }
+        updateTotal();
+    }
+
+    function updateTotal() {
+        const totalSpan = document.getElementById("total");
+        const number1 = parseInt(document.getElementById("myNumber").value);
+        const number2 = parseInt(document.getElementById("myNumber1").value);
+        const number3 = parseInt(document.getElementById("myNumber2").value);
+        const totalValue = number1 + number2 + number3;
+        totalSpan.textContent = totalValue;
+    }
+
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+
+                }
+            }
+        }
+    }
+</script>
+<!-- ..................icon active hover js start............. -->
+<script>
+    var header = document.getElementById("active-icon");
+    var btns = header.getElementsByClassName("act");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+</script>
+<!-- ..................icon active hover js end............. -->
+
+</html>

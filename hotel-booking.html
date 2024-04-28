@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/poppins.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white" id="head-wrraper">
+    <div class="col-md-2 d-flex">
+      <a class="navbar-brand" href="#"><img src="/assets/images/logorr.png" class="w-50" alt="logo"></a>
+    </div>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="mr-auto navbar-nav">
+              <li class="nav-item"> <span class="text-red"><b><i class="bi bi-house-door-fill"></i>
+                    <a href="index.html"> Home</a> </b></span> </li>&nbsp;|&nbsp;
+              <li class="nav-item dropdown">
+                <a class="text-red" href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  <p><i class="bi bi-person-circle"></i><b>Hi, SHASHANK</b><i class="bi bi-caret-down-fill"></i></p>
+
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item text-red" href="profile.html"><i class="bi-person-circle"></i>
+                    Profile</a>
+                  <a class="dropdown-item text-red" href="changepassword.html"><i class="bi-lock-fill"></i>
+                    Change Password</a>
+                  <a class="dropdown-item text-red" href="manage_booking.html"><i class="bi-gear-fill"></i>
+                    Manage Booking</a>
+                  <a class="dropdown-item text-red" href="add-topup.html"><i class="bi bi-credit-card"></i>
+                    Add Topup</a>
+                  <a class="dropdown-item text-red" href="login.html"><i class="bi bi-box-arrow-right"></i>
+                    Logout</a>
+                </div>
+              </li> &nbsp;|&nbsp;
+              <li class="agent-credit-limit agentBalance nav-item">
+                <a class=" text-red" enabled="false"><i class="bi bi-wallet2"></i><b>Credit Limit: <span
+                      id="lnkBalance">0.00
+                      AED</span> </b> </a>
+              </li>&nbsp;|&nbsp;
+
+
+
+              <li class="nav-item">
+                <a class="btnn divAgentList internalPage" style="display: block;">
+                  <marquee behavior="" direction="">SHASHANK Gupta - FREEL</marquee>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </nav>
+  <div class="toggled">
+    <div id="page-content-wrapper">
+      <section class="section">
+        <div class="card" style="width: 71rem;
+    margin: auto;">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Special title treatment</h5> -->
+            <div class="row">
+              <div class="col-md-3">
+                <img height="150px" width="200px" src="./assets/images/pexels-pixabay-258154.jpg" alt="">
+              </div>
+              <div class="col-md-6">
+                <h4>
+                  Oyo 30860 Sun Palace
+                  <span class="property-txt">Palace</span>
+                  <span>3</span>
+                  <!-- <i class="bi bi-star-fill">b</i> -->
+                  <i class="fas fa-star red-star"></i>
+
+                  <i class="fas fa-star red-star"></i>
+
+                  <i class="fas fa-star red-star"></i>
+
+
+
+
+                </h4>
+
+                <i class="fas fa-map-marked-alt"></i> Syndicate Tower, Above Bhatia Tyres, Near Teen Pati Bus Stand,
+                Wright
+                Town, 482002 Jabalpur, India, Jabalpur
+                <h6 class="text-secondary range-address mb-2">13.07 km from Jabalpur, Madhya Pradesh, India </h6>
+
+
+                <p>Amenities:</p>
+                <div class="row">
+                  <div class="amin-icons">
+
+
+                    <img data-tooltip="Breakfast" src="./assets/images/restuarant.png">
+                    <img data-tooltip="Breakfast" src="./assets/images/lunch.png">
+                    <img data-tooltip="Restaurant" src="./assets/images/wifi.png">
+                    <img data-tooltip="Internet" src="./assets/images/tab.png">
+
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <p class="redtext">Starting from </p>
+                <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <del><strong class="res-price-text  line-through"> AED <span class="line-through"
+                        id="un">54.13</span></strong></del>
+                  <span class="dis-price">Published Rate</span><br>
+
+                  <strong> <class="res-price-text"> AED <span id="un">51.71</span></strong>
+                  <span class="dis-price">Net Price</span>
+                  <br>
+                  <br>
+                  <a class="btn BgcolorOrange text-white" type="button" class="btn btn-primary"
+                    data-bs-toggle="collapse" data-bs-target="#demo">View Details</a>&nbsp;
+                  <a href="book-hotel.html" class="btn BgcolorOrange text-white" type="button"
+                    class="btn btn-primary">Book Now</a>
+                </a>
+              </div>
+              <div id="demo" class="collapse" style="width: 100%;">
+                <br>
+                <div class="container">
+                  <nav class="nav nav-pills nav-fill ulist">
+                    <a class="nav-item nav-link active BgcolorOrange" data-bs-toggle="collapse" data-bs-target="#demo1"
+                      href="#">
+                      Room Types
+                    </a>
+                    <a class="nav-item nav-link active BgcolorOrange" data-bs-toggle="collapse" data-bs-target="#demo2"
+                      href="#">Overview</a>
+                    <a class="nav-item nav-link active BgcolorOrange" data-bs-toggle="collapse" data-bs-target="#demo3"
+                      href="#">Amenities</a>
+                    <a class="nav-item nav-link active BgcolorOrange" data-bs-toggle="collapse" data-bs-target="#demo4"
+                      href="#">Photos</a>
+                    <a class="nav-item nav-link active BgcolorOrange" data-bs-toggle="collapse" data-bs-target="#demo5"
+                      href="#">Reviews</a>
+                  </nav>
+                </div>
+                <br>
+
+                <nav id="demo1" class="collapse">
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="headingOne">
+                        <button class="accordion-button BgcolorOrange text-white w-100" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                          aria-controls="collapseOne">
+                          <b>Delux</b>
+                        </button>
+                      </h4>
+                      <div class="container-fluid" id="collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/th (2).jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <b class="bit1">Delux room</b>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Room only
+                                </strong>
+                                <br>
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/hhh.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Saver Single</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/kkk.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Saver Single</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed  BgcolorOrange text-white w-100" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                          aria-controls="collapseTwo">
+                          <b>Standard Room</b>
+                        </button>
+                      </h4>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/room1.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Saver Double Room</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Room only
+                                </strong>
+                                <br>
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/room2.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Saver Double</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/room3.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Saver Double Room </strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed  BgcolorOrange text-white w-100" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                          aria-controls="collapseThree">
+                          <strong>Classic</strong>
+                        </button>
+                      </h4>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/room4.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Classic</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Room only
+                                </strong>
+                                <br>
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/room5.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Classic room</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/img7.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Classic </strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+                <nav id="demo2" class="collapse">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.1552028250435!2d79.9281650748284!3d23.16453491101649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981ae0f8a619537%3A0xcc4309e3315747cb!2sOYO%20Sun%20Palace!5e0!3m2!1sen!2sin!4v1691142283462!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </nav>
+                <br>
+                <nav id="demo3" class="collapse">
+                  <br>
+                  <h3><strong>Not Found</strong></h3>
+                </nav>
+                <nav id="demo4" class="collapse">
+                  <br>
+
+                  <br>
+                  <div class="fancybox-wrap fancybox-desktop fancybox-type-image fancybox-opened" tabindex="-1">
+
+                    <img class="fancybox-image" src="./assets/images/th.jpg" alt="">
+                    <a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a><a
+                      title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>
+                    <a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>
+
+                  </div>
+
+                  <div class="fancybox-wrap fancybox-desktop fancybox-type-image fancybox-opened" tabindex="-1">
+
+                    <img class="fancybox-image" src="./assets/images/th (3).jpg" alt="">
+                    <a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a><a
+                      title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>
+                    <a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>
+
+                  </div>
+
+                  <div class="fancybox-wrap fancybox-desktop fancybox-type-image fancybox-opened" tabindex="-1">
+
+                    <img class="fancybox-image" src="./assets/images/th (1).jpg" alt="">
+                    <a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a><a
+                      title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>
+                    <a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>
+
+                  </div>
+
+                  <div class="fancybox-wrap fancybox-desktop fancybox-type-image fancybox-opened" tabindex="-1">
+
+                    <img class="fancybox-image" src="./assets/images/th (2).jpg" alt="">
+                    <a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a><a
+                      title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>
+                    <a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>
+
+                  </div>&nbsp;
+
+                  <div class="fancybox-wrap fancybox-desktop fancybox-type-image fancybox-opened" tabindex="-1">
+
+                    <img class="fancybox-image" src="./assets/images/th (4).jpg" alt="">
+                    <a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a><a
+                      title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>
+                    <a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>
+
+                  </div>
+                </nav>
+
+                <nav id="demo5" class="collapse">
+                  <br>
+                  <h3><strong>Not Found</strong></h3>
+                </nav>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width:71rem;
+      margin: auto;">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Special title treatment</h5> -->
+            <div class="row">
+              <div class="col-md-3">
+                <img height="150px" width="200px" src="./assets/images/th (2).jpg" alt="">
+              </div>
+              <div class="col-md-6">
+                <h4>
+                  Oyo 9305 Hotel Dwarika Inn
+                  <span class="property-txt">Hotel</span>
+                  <span>3</span>
+                  <!-- <i class="bi bi-star-fill">b</i> -->
+                  <i class="fas fa-star red-star"></i>
+
+                  <i class="fas fa-star red-star"></i>
+
+                  <i class="fas fa-star red-star"></i>
+
+
+
+                </h4>
+
+                <i class="fas fa-map-marked-alt"></i> Plot No.A-1, Jabalpur
+                Civic Center
+                <h6 class="text-secondary range-address mb-2">12.97 km from Jabalpur, Madhya Pradesh, India </h6>
+
+
+                <p>Amenities:</p>
+                <div class="row">
+                  <div class="amin-icons">
+
+
+                    <img data-tooltip="Breakfast" src="./assets/images/restuarant.png">
+                    <img data-tooltip="Breakfast" src="./assets/images/lunch.png">
+                    <img data-tooltip="Restaurant" src="./assets/images/wifi.png">
+                    <img data-tooltip="Internet" src="./assets/images/tab.png">
+
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <p class="redtext">Starting from </p>
+                <a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <del><strong class="res-price-text  line-through"> AED <span class="line-through"
+                        id="un">54.13</span></strong></del>
+                  <span class="dis-price">Published Rate</span><br>
+
+                  <strong> <class="res-price-text"> AED <span id="un">51.71</span></strong>
+                  <span class="dis-price">Net Price</span>
+                  <br>
+                  <br>
+                  <a class="btn BgcolorOrange text-white" type="button" class="btn BgcolorOrange text-white"
+                    data-bs-toggle="collapse" data-bs-target="#demo6">
+                    View Details</a>
+                  &nbsp; <a href="book-hotel.html" class="btn BgcolorOrange text-white" type="button"
+                    class="btn btn-primary">Book Now</a>
+
+                </a>
+              </div>
+              <div id="demo6" class="collapse" style="width: 100%;">
+                <br>
+                <div class="container">
+                  <nav class="nav nav-pills nav-fill ulist">
+                    <a class="nav-item nav-link active BgcolorOrange" data-bs-toggle="collapse" data-bs-target="#demo7"
+                      href="#">
+                      Room Types
+                    </a>
+                    <a class="nav-item nav-link active BgcolorOrange" data-bs-toggle="collapse" data-bs-target="#demo8"
+                      href="#">Overview</a>
+                    <a class="nav-item nav-link active BgcolorOrange" data-bs-toggle="collapse" data-bs-target="#demo9"
+                      href="#">Amenities</a>
+                    <a class="nav-item nav-link active BgcolorOrange" data-bs-toggle="collapse" data-bs-target="#demo10"
+                      href="#">Photos</a>
+                    <a class="nav-item nav-link active BgcolorOrange" data-bs-toggle="collapse" data-bs-target="#demo11"
+                      href="#">Reviews</a>
+                  </nav>
+                </div>
+
+                <br>
+                <nav id="demo7" class="collapse">
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="headingOne">
+                        <button class="accordion-button BgcolorOrange text-white w-100" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                          aria-controls="collapseOne" style="width: 69rem;">
+                          Delux
+                        </button>
+                      </h4>
+                      <div class="container-fluid" id="collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/th (2).jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Delux room</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Room only
+                                </strong>
+                                <br>
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/hhh.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Saver Single</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/kkk.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Saver Single</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed  BgcolorOrange text-white w-100 " type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                          aria-controls="collapseTwo">
+                          <b>Standard Room</b>
+                        </button>
+                      </h4>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/room1.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Saver Double Room</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Room only
+                                </strong>
+                                <br>
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/room2.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Saver Double</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/room3.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Saver Double Room </strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed  BgcolorOrange text-white w-100" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                          aria-controls="collapseThree">
+                          <b>Classic</b>
+                        </button>
+                      </h4>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/room4.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Classic</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Room only
+                                </strong>
+                                <br>
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/room5.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Classic room</strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <!-- <strong id="onn" class="bit">
+                            Room only
+                        </strong> -->
+                                <br>
+                                <!-- <i id="on" class="fas fa-info-circle"></i> -->
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="./assets/images/img7.jpg" width="150px">
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Room and Occupancy</strong>
+                                <br>
+                                <strong class="bit">
+                                  Room 1
+                                  | 2 Adults
+
+                                </strong>
+
+                                <strong class="bit1">Classic </strong>
+                                <br>
+
+                                <br>
+                                <p class="bit1">
+                                  View policy
+                                  <br>
+                                  PAN Not Required
+                                  <strong class="bit">
+                                    <br>
+                                    Non-refundable
+                                    <br>
+                                    GST Claimable
+                                  </strong>
+                                  <br>
+                                  Includes
+                                </p>
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Total Price</strong>
+                                <br>
+                                <strong class="bit1 line-through">AED</strong>
+                                <span class="bit">
+                                  <strong class="line-through"> 51.48</strong>
+
+                                </span>
+                                <strong class="bit1">Published Rate</strong>
+                                <br>
+                                <strong class="bit1">AED</strong>
+                                <span class="bit"><strong> 51.48</strong>
+                                </span><strong class="bit1">Net Payable</strong>
+
+                              </div>
+                              <div class="col-md-3">
+                                <strong>Meal Plan</strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  Bed
+                                </strong>
+                                <br>
+                                <strong id="onn" class="bit">
+                                  and Breakfast
+                                </strong>
+                                <br>
+
+                                <i id="on" class="fas fa-info-circle"></i>
+                                <br><br>
+                                <a class="re-btnn" type="button" class="btn btn-primary">Book Now</a>
+                                </a>
+                              </div>
+
+                              <div class="col-md-3">
+                                <strong>Mail</strong>
+                                <br>
+                                <input type="checkbox">
+                                <br>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+                <nav id="demo8" class="collapse">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.092974674237!2d79.93201567482848!3d23.166806510931227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981ae11dde8cd87%3A0x4918b5c179ec4150!2sHotel%20Dwarika%20Inn!5e0!3m2!1sen!2sin!4v1691130870931!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </nav>
+                <br>
+                <nav id="demo9" class="collapse">
+                  <br>
+                  <h3><strong>Not Found</strong></h3>
+                </nav>
+                <nav id="demo10" class="collapse">
+                  <br>
+                  <br>
+                  <br>
+                  <div class="fancybox-wrap fancybox-desktop fancybox-type-image fancybox-opened" tabindex="-1">
+                    <div class="fancybox-skin">
+                      <div class="fancybox-outer">
+                        <div class="fancybox-inner">
+                          <img class="fancybox-image" src="./assets/images/one.jpg" alt="">
+                        </div><a title="Previous" class="fancybox-nav fancybox-prev"
+                          href="javascript:;"><span></span></a><a title="Next" class="fancybox-nav fancybox-next"
+                          href="javascript:;"><span></span></a>
+                      </div><a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>
+                    </div>
+                  </div>
+
+                  <div class="fancybox-wrap fancybox-desktop fancybox-type-image fancybox-opened" tabindex="-1">
+                    <div class="fancybox-skin">
+                      <div class="fancybox-outer">
+                        <div class="fancybox-inner">
+                          <img class="fancybox-image" src="./assets/images/two.jpg" alt="">
+                        </div><a title="Previous" class="fancybox-nav fancybox-prev"
+                          href="javascript:;"><span></span></a><a title="Next" class="fancybox-nav fancybox-next"
+                          href="javascript:;"><span></span></a>
+                      </div><a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>
+                    </div>
+                  </div>
+                </nav>
+
+                <nav id="demo11" class="collapse">
+                  <br>
+                  <h3><strong>Not Found</strong></h3>
+                </nav>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="footer">
+        <div>
+
+          <ul>
+            <li class="footer-li"><button class="bnt">powered-by <span><img src="../assets/images/logorr.png"
+                    height="25px" alt=""></span></button></li>
+            <li class="footer-li"><strong>Quick Links:</strong></li>
+            <li class="footer-li">Home<b>|</b></li>
+            <li class="footer-li">About<b>|</b></li>
+            <li class="footer-li">Services<b>|</b></li>
+            <li class="footer-li">Benefits<b>|</b></li>
+            <li class="footer-li"><b>Contect Us |</b></li>
+          </ul>
+
+        </div>
+        <div class="row footer-row">
+          <div class="col-md-3">
+            <h3>India</h3>
+            <div class="row">
+              <div class="col-md-1">
+                <p><i class="bi bi-phone"></i></p>
+              </div>
+              <div class="col-md-10"><span>+91 22-71200911 / 022-61200911</span></div>
+
+              <div class="col-md-1">
+                <p><i class="bi bi-mailbox"></i></p>
+              </div>
+              <div class="col-md-10"><span>tn.air@riya.travel</span></div>
+
+              <div class="col-md-1">
+                <p><i class="bi bi-house-fill"></i></p>
+              </div>
+              <div class="col-md-10"><span>tn.hotels@riya.travel</span></div>
+
+              <div class="col-md-1">
+                <p><i class="bi bi-geo-alt-fill"></i></i></p>
+              </div>
+              <div class="col-md-10"><span> M/1, Leela Business Park, Andheri - Kurla Rd, Andheri
+                  East, Mumbai, Maharashtra 400059</span></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h3>USA</h3>
+            <div class="row">
+              <div class="col-md-1">
+                <p><i class="bi bi-phone"></i></p>
+              </div>
+              <div class="col-md-10"><span>+1-972-947-2100</span></div>
+
+              <div class="col-md-1">
+                <p><i class="bi bi-mailbox"></i></p>
+              </div>
+              <div class="col-md-10"><span>info.usa@riya.travel</span></div>
+
+              <div class="col-md-1">
+                <p><i class="bi bi-house-fill"></i></p>
+              </div>
+              <div class="col-md-10"><span>1503 W Airport Fwy, Irving, TX 75062, USA</span></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h3>Canada</h3>
+            <div class="row">
+              <div class="col-md-1">
+                <p><i class="bi bi-phone"></i></p>
+              </div>
+              <div class="col-md-10"><span>1-204-415-5808</span></div>
+
+              <div class="col-md-1">
+                <p><i class="bi bi-mailbox"></i></p>
+              </div>
+              <div class="col-md-10"><span>info.ca@riya.travel</span></div>
+
+              <div class="col-md-1">
+                <p><i class="bi bi-house-fill"></i></p>
+              </div>
+              <div class="col-md-10"><span>Tyndall Market Mall, Unit 3A - 850 Keewatin Street, Winnipeg, MB - R2R 0Z5,
+                  Canada</span></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h3>UAE</h3>
+            <div class="row">
+              <div class="col-md-1">
+                <p><i class="bi bi-phone"></i></p>
+              </div>
+              <div class="col-md-10"><span>+971 4 319 2777</span></div>
+
+              <div class="col-md-1">
+                <p><i class="bi bi-mailbox"></i></p>
+              </div>
+              <div class="col-md-10"><span>trvlnxt.uae@riya.travel</span></div>
+
+              <div class="col-md-1">
+                <p><i class="bi bi-house-fill"></i></p>
+              </div>
+              <div class="col-md-10"><span> Unit No.3, Ground Floor, Shipping Tower, Mina Road, PO Box-186572, Bur
+                  Dubai, Dubai</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+crossorigin="anonymous"></script> -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#multiple-checkboxes').multiselect();
+  });  
+</script>
+<script>
+  // Toggle dropdown menu on click
+  var dropdownToggle = document.querySelector('.custom-dropdown .dropdown-toggle');
+  dropdownToggle.addEventListener('click', function () {
+    var dropdown = this.parentNode;
+    dropdown.classList.toggle('open');
+  });
+
+  // Close dropdown menu when clicking outside
+  window.addEventListener('click', function (event) {
+    var dropdown = document.querySelector('.custom-dropdown');
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+</script>
+<script>
+  function closeTab() {
+    // Close the tab or perform any other desired action here
+    window.close();
+  }
+</script>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+
+<script src="assets/js/collapse.js"></script>
+
+<script>
+  var x, i, j, l, ll, selElmnt, a, b, c;
+
+  x = document.getElementsByClassName("custom-select");
+  l = x.length;
+  for (i = 0; i < l; i++) {
+    selElmnt = x[i].getElementsByTagName("select")[0];
+    ll = selElmnt.length;
+
+    a = document.createElement("DIV");
+    a.setAttribute("class", "select-selected");
+    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    x[i].appendChild(a);
+
+    b = document.createElement("DIV");
+    b.setAttribute("class", "select-items select-hide");
+    for (j = 1; j < ll; j++) {
+
+      c = document.createElement("DIV");
+      c.innerHTML = selElmnt.options[j].innerHTML;
+      c.addEventListener("click", function (e) {
+
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+      });
+      b.appendChild(c);
+    }
+    x[i].appendChild(b);
+    a.addEventListener("click", function (e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+  }
+  function closeAllSelect(elmnt) {
+    /*a function that will close all select boxes in the document,
+    except the current select box:*/
+    var x, y, i, xl, yl, arrNo = [];
+    x = document.getElementsByClassName("select-items");
+    y = document.getElementsByClassName("select-selected");
+    xl = x.length;
+    yl = y.length;
+    for (i = 0; i < yl; i++) {
+      if (elmnt == y[i]) {
+        arrNo.push(i)
+      } else {
+        y[i].classList.remove("select-arrow-active");
+      }
+    }
+    for (i = 0; i < xl; i++) {
+      if (arrNo.indexOf(i)) {
+        x[i].classList.add("select-hide");
+      }
+    }
+  }
+  /*if the user clicks anywhere outside the select box,
+  then close all select boxes:*/
+  document.addEventListener("click", closeAllSelect);
+</script>
+
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  function increment(inputId) {
+    const inputElement = document.getElementById(inputId);
+    let value = parseInt(inputElement.value);
+    if (value < 9) {
+      value++;
+      inputElement.value = value;
+    }
+    updateTotal();
+  }
+
+  function decrement(inputId) {
+    const inputElement = document.getElementById(inputId);
+    let value = parseInt(inputElement.value);
+    if (value > 0) {
+      value--;
+      inputElement.value = value;
+    }
+    updateTotal();
+  }
+
+  function updateTotal() {
+    const totalSpan = document.getElementById("total");
+    const number1 = parseInt(document.getElementById("myNumber").value);
+    const number2 = parseInt(document.getElementById("myNumber1").value);
+    const number3 = parseInt(document.getElementById("myNumber2").value);
+    const totalValue = number1 + number2 + number3;
+    totalSpan.textContent = totalValue;
+  }
+
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+
+        }
+      }
+    }
+  }
+</script>
+<!-- ..................icon active hover js start............. -->
+<script>
+  var header = document.getElementById("active-icon");
+  var btns = header.getElementsByClassName("act");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<!-- ..................icon active hover js end............. -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</html>
